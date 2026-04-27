@@ -271,9 +271,7 @@ app.post('/api/remove-object/process', async (req, res) => {
 
     // Dynamic imports
     const FormData = (await import('form-data')).default;
-    const fetch = (await import('node-fetch')).default;
-
-
+    const fetch = (await import('node-fetch')).default
     const form = new FormData();
     form.append('image', imageBuffer, {
       filename: 'image.png',
