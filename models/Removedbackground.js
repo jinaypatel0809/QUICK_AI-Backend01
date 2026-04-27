@@ -1,13 +1,17 @@
 import mongoose from 'mongoose';
 
-const removedBackgroundSchema = new mongoose.Schema({
+const RemovedBackgroundSchema = new mongoose.Schema({
   originalName: {
     type: String,
     required: true,
   },
-  imageBase64: {
-    type: String,
+  imageUrl: {
+    type: String,   // Cloudinary / S3 URL
     required: true,
+  },
+  userId: {
+    type: String,
+    default: 'anonymous',
   },
   createdAt: {
     type: Date,
@@ -15,8 +19,8 @@ const removedBackgroundSchema = new mongoose.Schema({
   },
 });
 
-const removedBackground = mongoose.model('removedBackground', removedBackgroundSchema);
+const RemovedBackground = mongoose.model('RemovedBackground', RemovedBackgroundSchema);
 
 
 
-export default removedBackground;
+export default RemovedBackground;
