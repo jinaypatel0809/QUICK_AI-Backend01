@@ -272,7 +272,7 @@ app.post('/api/remove-object/process', async (req, res) => {
     // Dynamic imports
     const FormData = (await import('form-data')).default;
     const fetch = (await import('node-fetch')).default;
-import RemovedBackground from './models/RemovedBackground';
+
 
     const form = new FormData();
     form.append('image', imageBuffer, {
